@@ -1,0 +1,16 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper</AssemblyName>
+        <PackageId>Cosmos.Dapper</PackageId>
+        <Description>A StackExchange Dapper package for Cosmos.Data</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="System.Collections.Immutable" Version="1.7.1" />
+        <PackageReference Include="Dapper" Version="2.0.35" />
+        <PackageReference Include="DotNetCore.Collections.Paginable.SqlKata" Version="3.3.0" />
+        <PackageReference Include="SqlKata.Execution" Version="2.2.0" />
+    </ItemGroup>
+
+</Project>

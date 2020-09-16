@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cosmos.Dapper", "src\Cosmos.Dapper\Cosmos.Dapper._build.csproj", "{60DFA18B-AA3D-4C7F-B508-A5573B0DF3E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cosmos.Dapper.MySql", "src\Cosmos.Dapper.MySql\Cosmos.Dapper.MySql._build.csproj", "{BB7DFC74-233A-46F3-A606-018C53437D02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cosmos.Dapper.PostgreSql", "src\Cosmos.Dapper.PostgreSql\Cosmos.Dapper.PostgreSql._build.csproj", "{18754969-DADD-48D4-8960-AB255CB81339}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cosmos.Dapper.SqlServer", "src\Cosmos.Dapper.SqlServer\Cosmos.Dapper.SqlServer._build.csproj", "{D5A64795-F101-433E-9247-2F421C5A9A71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Dapper.MySqlConnector", "src\Cosmos.Dapper.MySqlConnector\Cosmos.Dapper.MySqlConnector._build.csproj", "{C1FDF7BB-9622-4022-989B-19377C6E7E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Dapper.Oracle", "src\Cosmos.Dapper.Oracle\Cosmos.Dapper.Oracle._build.csproj", "{0294E2B4-1FBA-4B3B-B72E-071EB152FB4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmos.Dapper.Sqlite", "src\Cosmos.Dapper.Sqlite\Cosmos.Dapper.Sqlite._build.csproj", "{CC713674-8FBC-4048-9AAB-B73DDCCB7776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60DFA18B-AA3D-4C7F-B508-A5573B0DF3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DFA18B-AA3D-4C7F-B508-A5573B0DF3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DFA18B-AA3D-4C7F-B508-A5573B0DF3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DFA18B-AA3D-4C7F-B508-A5573B0DF3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB7DFC74-233A-46F3-A606-018C53437D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB7DFC74-233A-46F3-A606-018C53437D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB7DFC74-233A-46F3-A606-018C53437D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB7DFC74-233A-46F3-A606-018C53437D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18754969-DADD-48D4-8960-AB255CB81339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18754969-DADD-48D4-8960-AB255CB81339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18754969-DADD-48D4-8960-AB255CB81339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18754969-DADD-48D4-8960-AB255CB81339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A64795-F101-433E-9247-2F421C5A9A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A64795-F101-433E-9247-2F421C5A9A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A64795-F101-433E-9247-2F421C5A9A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A64795-F101-433E-9247-2F421C5A9A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FDF7BB-9622-4022-989B-19377C6E7E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FDF7BB-9622-4022-989B-19377C6E7E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FDF7BB-9622-4022-989B-19377C6E7E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FDF7BB-9622-4022-989B-19377C6E7E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0294E2B4-1FBA-4B3B-B72E-071EB152FB4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0294E2B4-1FBA-4B3B-B72E-071EB152FB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0294E2B4-1FBA-4B3B-B72E-071EB152FB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0294E2B4-1FBA-4B3B-B72E-071EB152FB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC713674-8FBC-4048-9AAB-B73DDCCB7776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC713674-8FBC-4048-9AAB-B73DDCCB7776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC713674-8FBC-4048-9AAB-B73DDCCB7776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC713674-8FBC-4048-9AAB-B73DDCCB7776}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4A698E6-1EB9-441C-8DCB-C1FF55EA4A36}
+	EndGlobalSection
+EndGlobal

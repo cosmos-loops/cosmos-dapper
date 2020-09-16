@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.Dapper.MySqlConnector._shared.props" />
+
+    <Import Project="..\..\common.props" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\Cosmos.Dapper\Cosmos.Dapper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Cosmos.Data.Extensions.MySqlConnector" Version="$(TargetPkgVersion)" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper.SqlServer</AssemblyName>
+        <PackageId>Cosmos.Dapper.SqlServer</PackageId>
+        <Description>Microsoft SQL Server package for Cosmos.Dapper</Description>
+    </PropertyGroup>
+
+    <Import Project="..\..\asset\props\package-reference-append.props" />
+
+</Project>

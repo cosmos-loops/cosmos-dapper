@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.Dapper.SqlServer</name>
+    </assembly>
+    <members>
+        <member name="T:Cosmos.Dapper.Core.ConnectionExtensions">
+            <summary>
+            Extensions of connection
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.ConnectionExtensions.ToConn(Cosmos.Dapper.DapperOptions)">
+            <summary>
+            To connection
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.ConnectionExtensions.ToConn(Cosmos.Dapper.DapperOptionsAccessor,System.String)">
+            <summary>
+            To Connection
+            </summary>
+            <param name="accessor"></param>
+            <param name="name"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Cosmos.Dapper.Core.SqlServerContextParams">
+            <summary>
+            Context params for Microsoft SQL Server
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.SqlServerContextParams.#ctor(Cosmos.Dapper.IDapperMappingConfig)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Dapper.Core.SqlServerContextParams" />
+            </summary>
+            <param name="mappingConfig"></param>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.SqlServerContextParams.GetConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.SqlServerContextParams.GetOptions">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.SqlServerContextParams.GetSqlGenerator">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.SqlServerContextParams.GetBulkInsertOperator(Cosmos.Dapper.Core.IDapperConnector)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cosmos.Dapper.Map.EntityMap`1">
+            <summary>
+            Entity Map
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:Cosmos.Dapper.Map.ISqlServerEntityMap">
+            <summary>
+            Interface for EntityMap for Microsoft SQL Server
+            </summary>
+        </member>
+        <member name="T:Cosmos.Dapper.Operations.SqlServerBulkInsertOperator">
+            <summary>
+            Bulk insert operator for SqlServer
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.SqlServerBulkInsertOperator.#ctor(Cosmos.Dapper.Core.IDapperConnector)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Dapper.Operations.SqlServerBulkInsertOperator" />
+            </summary>
+            <param name="connector"></param>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.SqlServerBulkInsertOperator.Process``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Process
+            </summary>
+            <param name="dataSet"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.SqlServerBulkInsertOperator.ProcessAsync``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Process async
+            </summary>
+            <param name="dataSet"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dapper.SqlServerContext`1">
+            <summary>
+            SqlServer Context
+            </summary>
+            <typeparam name="TContext"></typeparam>
+        </member>
+        <member name="M:Cosmos.Dapper.SqlServerContext`1.#ctor(Cosmos.Dapper.DapperOptions)">
+            <summary>
+            SqlServer Context
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:Cosmos.Dapper.SqlServerContext`1.EntityMapType">
+            <summary>
+            Type of EntityMap
+            </summary>
+        </member>
+        <member name="T:Cosmos.Data.SqlKata.EntityQueryExtensions">
+            <summary>
+            Extensions for entity query
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.SqlKata.EntityQueryExtensions.SaveInsert``1(Cosmos.Data.SqlKata.EntityQueryBuilder,System.Data.IDbTransaction,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Save insert
+            </summary>
+            <param name="query"></param>
+            <param name="transaction"></param>
+            <param name="commandType"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlKata.EntityQueryExtensions.SaveInsertAsync``1(Cosmos.Data.SqlKata.EntityQueryBuilder,System.Data.IDbTransaction,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Save insert async
+            </summary>
+            <param name="query"></param>
+            <param name="transaction"></param>
+            <param name="commandType"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Data.SqlServerDapper">
+            <summary>
+            Microsoft SQL Server static helper with Dapper
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetClient(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get dapper client
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.CreateOptions(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Create a new dapper options
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetDapperAction(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetDapperAction``1(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetDapperAsynchronousAction(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets asynchronous dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetDapperAsynchronousAction``1(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets asynchronous dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetSqlKataQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetSqlKataEntityQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Entity Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlServerDapper.GetSqlKataMultipleQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Multiple Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Data.Statements.Dialects.SqlServerDialect">
+            <summary>
+            Dialect of Microsoft SQL Server
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.SqlServerDialect.DialectName">
+            <summary>
+            Dialect name
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.SqlServerDialect.OpenQuote">
+            <summary>
+            Open quote
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.SqlServerDialect.CloseQuote">
+            <summary>
+            Close quote
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetIdentitySql(System.String)">
+            <summary>
+            Get identity sql
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetPagingSql(System.String,System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get paging sql
+            </summary>
+            <param name="sql"></param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetSetSql(System.String,System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get set sql
+            </summary>
+            <param name="sql"></param>
+            <param name="firstResult"></param>
+            <param name="maxResults"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetOrderByClause(System.String)">
+            <summary>
+            Get order-by clause
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetFromStart(System.String)">
+            <summary>
+            Get from-start
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetSelectEnd(System.String)">
+            <summary>
+            Get select-end
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.SqlServerDialect.GetColumnNames(System.String)">
+            <summary>
+            Get column name
+            </summary>
+            <param name="sql"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dependency.DbContextDependencyExtensions">
+            <summary>
+            Extensions for DbContext Config
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="configuration"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server
+            </summary>
+            <param name="config"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer(Cosmos.Data.Core.Registrars.IDbContextConfig,System.Action{Cosmos.Dapper.DapperOptions},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server
+            </summary>
+            <param name="config"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer(Cosmos.Data.Core.Registrars.IDbContextConfig,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.DapperOptions},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server
+            </summary>
+            <param name="config"></param>
+            <param name="configuration"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="configuration"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.Action{Cosmos.Dapper.DapperOptions{``0}},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithSqlServer``1(Cosmos.Data.Core.Registrars.IDbContextConfig,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.DapperOptions{``0}},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Microsoft SQL Server Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="configuration"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

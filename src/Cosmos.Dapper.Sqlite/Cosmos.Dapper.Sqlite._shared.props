@@ -1,0 +1,11 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper.Sqlite</AssemblyName>
+        <PackageId>Cosmos.Dapper.Sqlite</PackageId>
+        <Description>Sqlite package for Cosmos.Dapper</Description>
+    </PropertyGroup>
+
+    <Import Project="..\..\asset\props\package-reference-append.props" />
+
+</Project>

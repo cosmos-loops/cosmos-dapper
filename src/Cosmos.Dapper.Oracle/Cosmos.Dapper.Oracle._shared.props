@@ -1,0 +1,11 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper.Oracle</AssemblyName>
+        <PackageId>Cosmos.Dapper.Oracle</PackageId>
+        <Description>Oracle package for Cosmos.Dapper</Description>
+    </PropertyGroup>
+
+    <Import Project="..\..\asset\props\package-reference-append.props" />
+
+</Project>

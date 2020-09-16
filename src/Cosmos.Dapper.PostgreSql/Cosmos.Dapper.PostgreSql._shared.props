@@ -1,0 +1,11 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper.PostgreSql</AssemblyName>
+        <PackageId>Cosmos.Dapper.PostgreSql</PackageId>
+        <Description>PostgreSql package for Cosmos.Dapper</Description>
+    </PropertyGroup>
+
+    <Import Project="..\..\asset\props\package-reference-append.props" />
+
+</Project>

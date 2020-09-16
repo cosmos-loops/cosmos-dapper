@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.Dapper.PostgreSql</name>
+    </assembly>
+    <members>
+        <member name="T:Cosmos.Dapper.Core.ConnectionExtensions">
+            <summary>
+            Extensions of connection
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.ConnectionExtensions.ToConn(Cosmos.Dapper.DapperOptions)">
+            <summary>
+            To connection
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.ConnectionExtensions.ToConn(Cosmos.Dapper.DapperOptionsAccessor,System.String)">
+            <summary>
+            To connection
+            </summary>
+            <param name="accessor"></param>
+            <param name="name"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Cosmos.Dapper.Core.PostgreSqlContextParams">
+            <summary>
+            Context params for PostgreSql
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.PostgreSqlContextParams.#ctor(Cosmos.Dapper.IDapperMappingConfig)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Dapper.Core.PostgreSqlContextParams" />
+            </summary>
+            <param name="mappingConfig"></param>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.PostgreSqlContextParams.GetConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.PostgreSqlContextParams.GetOptions">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.PostgreSqlContextParams.GetSqlGenerator">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.PostgreSqlContextParams.GetBulkInsertOperator(Cosmos.Dapper.Core.IDapperConnector)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cosmos.Dapper.Map.EntityMap`1">
+            <summary>
+            Entity Map
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:Cosmos.Dapper.Map.IPostgreSqlEntityMap">
+            <summary>
+            Interface for EntityMap for PostgreSql
+            </summary>
+        </member>
+        <member name="T:Cosmos.Dapper.Operations.PostgreSqlBulkInsertOperator">
+            <summary>
+            Bulk insert operator for PostgreSql
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.PostgreSqlBulkInsertOperator.#ctor(Cosmos.Dapper.Core.IDapperConnector)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Dapper.Operations.PostgreSqlBulkInsertOperator" />
+            </summary>
+            <param name="connector"></param>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.PostgreSqlBulkInsertOperator.Process``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Process
+            </summary>
+            <param name="dataSet"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.PostgreSqlBulkInsertOperator.ProcessAsync``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Process async
+            </summary>
+            <param name="dataSet"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dapper.PostgreSqlContext`1">
+            <summary>
+            PostgreSql Context
+            </summary>
+            <typeparam name="TContext"></typeparam>
+        </member>
+        <member name="M:Cosmos.Dapper.PostgreSqlContext`1.#ctor(Cosmos.Dapper.DapperOptions)">
+            <summary>
+            PostgreSql Context
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:Cosmos.Dapper.PostgreSqlContext`1.EntityMapType">
+            <summary>
+            Type of EntityMap
+            </summary>
+        </member>
+        <member name="T:Cosmos.Data.PostgreSqlDapper">
+            <summary>
+            PostgreSQL static helper with Dapper
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetClient(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get dapper client
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.CreateOptions(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Create a new dapper options
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetDapperAction(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetDapperAction``1(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetDapperAsynchronousAction(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets asynchronous dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetDapperAsynchronousAction``1(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets asynchronous dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetSqlKataQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetSqlKataEntityQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Entity Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.PostgreSqlDapper.GetSqlKataMultipleQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Multiple Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Data.SqlKata.EntityQueryExtensions">
+            <summary>
+            Extensions for entity query
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.SqlKata.EntityQueryExtensions.SaveInsert``1(Cosmos.Data.SqlKata.EntityQueryBuilder,System.Data.IDbTransaction,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Save insert
+            </summary>
+            <param name="query"></param>
+            <param name="transaction"></param>
+            <param name="commandType"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.SqlKata.EntityQueryExtensions.SaveInsertAsync``1(Cosmos.Data.SqlKata.EntityQueryBuilder,System.Data.IDbTransaction,System.Nullable{System.Data.CommandType})">
+            <summary>
+            Save insert async
+            </summary>
+            <param name="query"></param>
+            <param name="transaction"></param>
+            <param name="commandType"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Data.Statements.Dialects.PostgreSqlDialect">
+            <summary>
+            Dialect of PostgreSQL
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.PostgreSqlDialect.DialectName">
+            <summary>
+            Dialect name
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.PostgreSqlDialect.GetIdentitySql(System.String)">
+            <summary>
+            Get identity sql
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.PostgreSqlDialect.GetPagingSql(System.String,System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get paging sql
+            </summary>
+            <param name="sql"></param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.PostgreSqlDialect.GetSetSql(System.String,System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get set sql
+            </summary>
+            <param name="sql"></param>
+            <param name="firstResult"></param>
+            <param name="maxResults"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.PostgreSqlDialect.GetColumnName(System.String,System.String,System.String)">
+            <summary>
+            Get column name
+            </summary>
+            <param name="prefix"></param>
+            <param name="columnName"></param>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.PostgreSqlDialect.GetTableName(System.String,System.String,System.String)">
+            <summary>
+            Get table name
+            </summary>
+            <param name="schemaName"></param>
+            <param name="tableName"></param>
+            <param name="alias"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dependency.DbContextDependencyExtensions">
+            <summary>
+            Extensions for DbContext Config
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="configuration"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL
+            </summary>
+            <param name="config"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql(Cosmos.Data.Core.Registrars.IDbContextConfig,System.Action{Cosmos.Dapper.DapperOptions},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL
+            </summary>
+            <param name="config"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql(Cosmos.Data.Core.Registrars.IDbContextConfig,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.DapperOptions},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL
+            </summary>
+            <param name="config"></param>
+            <param name="configuration"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="configuration"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.Action{Cosmos.Dapper.DapperOptions{``0}},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithPostgreSql``1(Cosmos.Data.Core.Registrars.IDbContextConfig,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.DapperOptions{``0}},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for PostgreSQL Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="configuration"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

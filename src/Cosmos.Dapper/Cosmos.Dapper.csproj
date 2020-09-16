@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.Dapper._shared.props" />
+
+    <Import Project="..\..\common.props" />
+    
+    <ItemGroup>
+        <PackageReference Include="Cosmos.Data" Version="$(TargetPkgVersion)" />
+        <PackageReference Include="Cosmos.Data.Statements" Version="$(TargetPkgVersion)" />
+        <PackageReference Include="Cosmos.Data.Extensions.SqlKata" Version="$(TargetPkgVersion)" />
+    </ItemGroup>
+
+</Project>

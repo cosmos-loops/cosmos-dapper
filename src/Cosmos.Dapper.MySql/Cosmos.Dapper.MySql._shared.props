@@ -1,0 +1,11 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper.MySql</AssemblyName>
+        <PackageId>Cosmos.Dapper.MySql</PackageId>
+        <Description>Oracle official MySql.Data package with Cosmos.Dapper</Description>
+    </PropertyGroup>
+
+    <Import Project="..\..\asset\props\package-reference-append.props" />
+
+</Project>

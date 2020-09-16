@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cosmos.Dapper.Oracle</name>
+    </assembly>
+    <members>
+        <member name="T:Cosmos.Dapper.Core.ConnectionExtensions">
+            <summary>
+            Extensions of connection
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.ConnectionExtensions.ToConn(Cosmos.Dapper.DapperOptions)">
+            <summary>
+            To connection
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.ConnectionExtensions.ToConn(Cosmos.Dapper.DapperOptionsAccessor,System.String)">
+            <summary>
+            To Connection
+            </summary>
+            <param name="accessor"></param>
+            <param name="name"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Cosmos.Dapper.Core.OracleContextParams">
+            <summary>
+            Context params for Oracle
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.OracleContextParams.#ctor(Cosmos.Dapper.IDapperMappingConfig)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Dapper.Core.OracleContextParams" />
+            </summary>
+            <param name="mappingConfig"></param>
+        </member>
+        <member name="M:Cosmos.Dapper.Core.OracleContextParams.GetConfig">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.OracleContextParams.GetOptions">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.OracleContextParams.GetSqlGenerator">
+            <inheritdoc />
+        </member>
+        <member name="M:Cosmos.Dapper.Core.OracleContextParams.GetBulkInsertOperator(Cosmos.Dapper.Core.IDapperConnector)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cosmos.Dapper.Map.EntityMap`1">
+            <summary>
+            Entity Map
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="T:Cosmos.Dapper.Map.IOracleEntityMap">
+            <summary>
+            Interface for EntityMap for Oracle
+            </summary>
+        </member>
+        <member name="T:Cosmos.Dapper.Operations.OracleBulkInsertOperator">
+            <summary>
+            Bulk insert operator for Oracle
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.OracleBulkInsertOperator.#ctor(Cosmos.Dapper.Core.IDapperConnector)">
+            <summary>
+            Create a new instance of <see cref="T:Cosmos.Dapper.Operations.OracleBulkInsertOperator" />
+            </summary>
+            <param name="connector"></param>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.OracleBulkInsertOperator.Process``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Process
+            </summary>
+            <param name="dataSet"></param>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Cosmos.Dapper.Operations.OracleBulkInsertOperator.ProcessAsync``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Process async
+            </summary>
+            <param name="dataSet"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dapper.OracleContext`1">
+            <summary>
+            Oracle Context
+            </summary>
+            <typeparam name="TContext"></typeparam>
+        </member>
+        <member name="M:Cosmos.Dapper.OracleContext`1.#ctor(Cosmos.Dapper.DapperOptions)">
+            <summary>
+            Oracle Context
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:Cosmos.Dapper.OracleContext`1.EntityMapType">
+            <summary>
+            Type of EntityMap
+            </summary>
+        </member>
+        <member name="T:Cosmos.Data.OracleDapper">
+            <summary>
+            Oracle static helper with Dapper
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetClient(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get dapper client
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.CreateOptions(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Create a new dapper options
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetDapperAction(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetDapperAction``1(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetDapperAsynchronousAction(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets asynchronous dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetDapperAsynchronousAction``1(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Gets asynchronous dapper action
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <typeparam name="TEntity"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetSqlKataQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetSqlKataEntityQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Entity Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.OracleDapper.GetSqlKataMultipleQueryBuilder(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Get SqlKata Multiple Query Builder
+            </summary>
+            <param name="connectionString"></param>
+            <param name="timeout"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Data.Statements.Dialects.OracleDialect">
+            <summary>
+            Dialect of Oracle
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.OracleDialect.DialectName">
+            <summary>
+            Dialect name
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.OracleDialect.OpenQuote">
+            <summary>
+            Open quote
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.OracleDialect.CloseQuote">
+            <summary>
+            Close quote
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.OracleDialect.ParameterPrefix">
+            <summary>
+            Parameter prefix
+            </summary>
+        </member>
+        <member name="P:Cosmos.Data.Statements.Dialects.OracleDialect.SupportsMultipleStatements">
+            <summary>
+            Support multiple statements
+            </summary>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.OracleDialect.QuoteString(System.String)">
+            <summary>
+            Quote string
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.OracleDialect.GetIdentitySql(System.String)">
+            <summary>
+            Get identity sql
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.OracleDialect.GetPagingSql(System.String,System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get paging sql
+            </summary>
+            <param name="sql"></param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Data.Statements.Dialects.OracleDialect.GetSetSql(System.String,System.Int32,System.Int32,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Get set sql
+            </summary>
+            <param name="sql"></param>
+            <param name="firstResult"></param>
+            <param name="maxResults"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cosmos.Dependency.DbContextDependencyExtensions">
+            <summary>
+            Extensions for DbContext Config
+            </summary>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="configuration"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle
+            </summary>
+            <param name="config"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle(Cosmos.Data.Core.Registrars.IDbContextConfig,System.Action{Cosmos.Dapper.DapperOptions},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle
+            </summary>
+            <param name="config"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle(Cosmos.Data.Core.Registrars.IDbContextConfig,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.DapperOptions},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle
+            </summary>
+            <param name="config"></param>
+            <param name="configuration"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="name"></param>
+            <param name="configuration"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.String,System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="connectionString"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle``1(Cosmos.Data.Core.Registrars.IDbContextConfig,System.Action{Cosmos.Dapper.DapperOptions{``0}},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Cosmos.Dependency.DbContextDependencyExtensions.UseDapperWithOracle``1(Cosmos.Data.Core.Registrars.IDbContextConfig,Microsoft.Extensions.Configuration.IConfiguration,System.Action{Cosmos.Dapper.DapperOptions{``0}},System.Action{Cosmos.Dapper.FluentMapConfiguration},System.Collections.Generic.IList{System.Reflection.Assembly})">
+            <summary>
+            Use Cosmos Dapper for Oracle Strictly
+            </summary>
+            <param name="config"></param>
+            <param name="configuration"></param>
+            <param name="optionAct"></param>
+            <param name="configureConvention"></param>
+            <param name="mappingAssemblies"></param>
+            <typeparam name="TContext"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+    </members>
+</doc>

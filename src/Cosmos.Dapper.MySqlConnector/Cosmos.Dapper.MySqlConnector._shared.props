@@ -1,0 +1,11 @@
+﻿<Project>
+
+    <PropertyGroup>
+        <AssemblyName>Cosmos.Dapper.MySqlConnector</AssemblyName>
+        <PackageId>Cosmos.Dapper.MySqlConnector</PackageId>
+        <Description>MySqlConnector package with Cosmos.Dapper</Description>
+    </PropertyGroup>
+
+    <Import Project="..\..\asset\props\package-reference-append.props" />
+
+</Project>

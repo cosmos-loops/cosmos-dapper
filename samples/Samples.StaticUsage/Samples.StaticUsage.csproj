@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\version.dev.props"/>
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Cosmos.Dapper.SqlServer\Cosmos.Dapper.SqlServer.csproj" />
+      <ProjectReference Include="..\..\src\Cosmos.Dapper\Cosmos.Dapper.csproj" />
+    </ItemGroup>
+
+</Project>

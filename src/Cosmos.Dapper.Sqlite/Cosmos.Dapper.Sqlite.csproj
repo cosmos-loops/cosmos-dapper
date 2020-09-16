@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="Cosmos.Dapper.Sqlite._shared.props" />
+
+    <Import Project="..\..\common.props" />
+
+    <ItemGroup>
+        <ProjectReference Include="..\Cosmos.Dapper\Cosmos.Dapper.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Cosmos.Data.Extensions.Sqlite" Version="$(TargetPkgVersion)" />
+    </ItemGroup>
+
+</Project>
